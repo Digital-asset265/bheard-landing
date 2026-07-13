@@ -2,15 +2,9 @@
 
 import { useEffect } from "react";
 
-export default function Root() {
+export default function RootPage() {
   useEffect(() => {
-    const locale = navigator.language
-      .toLowerCase()
-      .startsWith("pt")
-      ? "pt"
-      : "en";
-
-    window.location.replace(`/${locale}/`);
+    window.location.replace("/en/");
   }, []);
 
   return (
@@ -21,7 +15,7 @@ export default function Root() {
         placeItems: "center",
       }}
     >
-      <p>Loading BHeard…</p>
+      <p>Loading BHeard...</p>
     </main>
   );
 }
