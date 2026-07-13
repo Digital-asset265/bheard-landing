@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+:root {
+  --bg: 12 6 24;          /* deep purple */
+  --fg: 245 243 255;      /* near-white */
+  --muted: 203 213 225;   /* slate-200 */
+  --ring: 168 85 247;     /* purple-500 */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: rgb(var(--fg));
+  background:
+    radial-gradient(1200px 800px at 10% 10%, rgba(168, 85, 247, 0.18), transparent 60%),
+    radial-gradient(1000px 700px at 90% 30%, rgba(236, 72, 153, 0.14), transparent 60%),
+    radial-gradient(900px 700px at 50% 90%, rgba(59, 130, 246, 0.12), transparent 60%),
+    rgb(var(--bg));
+}
+
+/* scrollbar (optional) */
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+*::-webkit-scrollbar-thumb {
+  background: rgba(168, 85, 247, 0.35);
+  border-radius: 999px;
+}
+*::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+/* Glow border animation */
+@keyframes bheardGlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-bheardGlow {
+  background-size: 200% 200%;
+  animation: bheardGlow 6s ease infinite;
+}
